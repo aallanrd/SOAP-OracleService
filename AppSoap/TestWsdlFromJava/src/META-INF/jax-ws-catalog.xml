@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://allanpc:8080/SoapService/Service?wsdl#%7Bhttp%3A%2F%2Fservice.master.com%2F%7DService"
+          uri="../com/master/service/Service.wsdl"/>
+</catalog>
