@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sessions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5.2">
+   <session xsi:type="server-session">
+      <name>ServiceTop-dbws-or-session</name>
+      <server-platform xsi:type="custom-platform">
+         <server-class>org.eclipse.persistence.platform.server.wls.WebLogic_10_Platform</server-class>
+         <external-transaction-controller-class>org.eclipse.persistence.transaction.wls.WebLogicTransactionController</external-transaction-controller-class>
+      </server-platform>
+      <logging xsi:type="eclipselink-log">
+         <log-level>fine</log-level>
+      </logging>
+      <login xsi:type="database-login">
+         <platform-class>org.eclipse.persistence.platform.database.oracle.Oracle11Platform</platform-class>
+         <external-connection-pooling>true</external-connection-pooling>
+         <external-transaction-controller>true</external-transaction-controller>
+         <datasource>java:comp/env/jdbc/OracleConnectDS</datasource>
+         <byte-array-binding>false</byte-array-binding>
+         <streams-for-binding>true</streams-for-binding>
+         <optimize-data-conversion>false</optimize-data-conversion>
+         <trim-strings>false</trim-strings>
+         <jdbc-batch-writing>false</jdbc-batch-writing>
+      </login>
+   </session>
+   <session xsi:type="database-session">
+      <name>ServiceTop-dbws-ox-session</name>
+      <logging xsi:type="eclipselink-log">
+         <log-level>off</log-level>
+      </logging>
+   </session>
+</sessions>

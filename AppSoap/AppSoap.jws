@@ -25,5 +25,6 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="SOAPServices/SOAPServices.jpr"/></hash>
+      <hash><url n="URL" path="WebServiceClient/WebServiceClient.jpr"/></hash>
    </list>
 </jws:workspace>

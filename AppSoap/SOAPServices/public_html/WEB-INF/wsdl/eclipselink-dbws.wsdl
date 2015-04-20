@@ -1,0 +1,26 @@
+<wsdl:definitions
+     name="ServiceTopService"
+     targetNamespace="http://soapservices/ServiceTopService"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:tns="http://soapservices/ServiceTopService"
+     xmlns:ns1="http://soapservices/ServiceTop"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:types>
+        <xsd:schema xmlns:tns="http://soapservices/ServiceTopService" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://soapservices/ServiceTopService" elementFormDefault="qualified">
+            <xsd:import schemaLocation="eclipselink-dbws-schema.xsd" namespace="http://soapservices/ServiceTop"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:portType name="ServiceTopService_Interface">
+    </wsdl:portType>
+    <wsdl:binding name="ServiceTopService_SOAP_HTTP" type="tns:ServiceTopService_Interface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    </wsdl:binding>
+    <wsdl:service name="ServiceTopService">
+        <wsdl:port name="ServiceTopServicePort" binding="tns:ServiceTopService_SOAP_HTTP">
+            <soap:address location="http://localhost:7101/AppSoap-SOAPServices-context-root/ServiceTop"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
